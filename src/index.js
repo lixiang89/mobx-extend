@@ -1,10 +1,13 @@
 import {keys,toJS,action} from 'mobx'
 
+const sign='isMobxExtend'
+
 const func=function(options={},target){
     // init mobx data
     target.prototype.init=action('init mobx',function(initParams){
         Object.assign(this,initParams)
     })
+    target.prototype.init[sign]=true
 
     /**
      * reset mobx keys by the keword typeof return value
@@ -27,7 +30,7 @@ const func=function(options={},target){
 
             if(Array.isArray(fields)&&fields.length>0){
                 const has=fields.includes(key)
-                if(!exclude&&!has||exclude&&has){
+                if((!exclude&&!has)||(exclude&&has)){
                     return
                 }
             }
@@ -55,6 +58,7 @@ const func=function(options={},target){
             }
         })
     })
+    target.prototype.reset[sign]=true;
 
     /**
      * 
@@ -62,15 +66,21 @@ const func=function(options={},target){
      */
     target.prototype.toJS=function(fields=[]){
         let res={}
-        if(Array.isArray(fields)&&fields.length>0){
-            for (const item of fields) {
-                res[item]=toJS(this[item])
+    
+        if(!(Array.isArray(fields)&&fields.length>0)){
+            fields=keys(this)
+        }
+
+        for (const item of fields) {
+            const val=this[item]
+            if(typeof val==='function'&&val[sign]===true){
+                continue
             }
-        }else{
-            res=toJS(this)
+            res[item]=toJS(val)
         }
         return res
     }
+    target.prototype.toJS[sign]=true;
 }
 
 export default function(options){
