@@ -54,23 +54,23 @@ const func=function(options={},target){
 
             }
         })
-
-        /**
-         * 
-         * @param {Array} fields the mobx keys to js
-         */
-        target.prototype.toJS=function(fields=[]){
-            let res={}
-            if(Array.isArray(fields)&&fields.length>0){
-                for (const item of fields) {
-                    res[item]=toJS(this[item])
-                }
-            }else{
-                res=toJS(this)
-            }
-            return res
-        }
     })
+
+    /**
+     * 
+     * @param {Array} fields the mobx keys to js
+     */
+    target.prototype.toJS=function(fields=[]){
+        let res={}
+        if(Array.isArray(fields)&&fields.length>0){
+            for (const item of fields) {
+                res[item]=toJS(this[item])
+            }
+        }else{
+            res=toJS(this)
+        }
+        return res
+    }
 }
 
 export default function(options){

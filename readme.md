@@ -1,6 +1,6 @@
 
 
-一个简单的mobx扩展包，提供对mobx数据进行初始化，重置功能。以及改变了toJS的使用方式(A simple mobx extension package that provides initialization and reset functions for mobx data. And changed the way toJS is used)
+一个简单的mobx 4.x扩展包，提供对mobx数据进行初始化，重置功能。以及改变了toJS的使用方式(A simple mobx 4.x extension package that provides initialization and reset functions for mobx data. And changed the way toJS is used)
 
 > English using Google Translate
 
