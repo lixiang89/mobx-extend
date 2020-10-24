@@ -1,0 +1,27 @@
+{
+  "name": "mobx-extend",
+  "version": "1.0.1",
+  "description": "a simple mobx extend",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mobx",
+    "react"
+  ],
+  "author": {
+    "name": "yishuihe"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mobx": "^4.15.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/"
+  }
+}
