@@ -25,7 +25,10 @@ class Store{
 // with param
 
 /** 
- * 根据typeOf关键字返回值来自定义需要重置的类型默认值，默认为(Customize the default value of the type that needs to be reset according to the return value of the typeOf keyword, the default is)：
+ * 根据typeOf关键字返回值来自定义需要重置的类型默认值，默认为
+ * (Customize the default value of the type that 
+ * needs to be reset according to the return value of 
+ * the typeOf keyword, the default is)：
  * 
  *  bool=false,
     arr=[],
@@ -81,7 +84,7 @@ store.reset()
 // 或者只重置部分数据，如（Or only reset part of the data, such as）：test
 store.reset(['test'])
 // 指定不重置的数据，如（Specify data not to be reset, such as）：test
-store.reset(['test',true])
+store.reset(['test'],true)
 ```
 
 ## 将mobx对象转为普通的js对象（Convert mobx objects to ordinary js objects）
@@ -93,5 +96,5 @@ store.reset(['test',true])
 - `{Array} fields` 需要转换成js对象的keys(The keys that need to be converted into js objects)
 
 ```javascript
-store.toJS('test')
+store.toJS(['test'])
 ```
