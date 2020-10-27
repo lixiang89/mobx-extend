@@ -64,7 +64,7 @@ export default new Store()
 ```javascript
 import store from './store.js'
 ```
-初始化mobx数据，可用于组件挂在前/后，随你喜欢(Initialize mobx data, which can be used to hang the component before/after,up to you)
+初始化mobx数据，可用于组件挂载前/后，随你喜欢(Initialize mobx data, which can be used before/after component mounting,up to you)
 
 `store.init(initParams)`
 - `{Object} initParams` 需要初始化数据的一些字段（Some fields that need to initialize data）
