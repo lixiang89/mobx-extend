@@ -2,12 +2,19 @@
 
 一个简单的mobx扩展包，提供对mobx数据进行初始化，重置功能。以及改变了toJS的使用方式(A simple mobx extension package that provides initialization and reset functions for mobx data. And changed the way toJS is used)
 
-> 不支持6.x（does not support 6.x）
-
 > English translated by Google Translator
 
+> 如果你的版本低于1.0.6，建议卸载重装。（If your version is lower than 1.0.6, it is recommended to uninstall and reinstall.）
+- 对package.json中的依赖了解不够造成的问题，深表歉意。（I apologize for the problems caused by insufficient understanding of the dependencies in package.json.）
+- 请先检查node_module文件下的mobx-extend目录，若包含了另一个node_module文件夹，请卸载并安装最新版本。（Please check the mobx-extend directory under the node_module file first, if it contains another node_module folder, please uninstall and install the latest version.）
+
+> 不支持6.x（does not support 6.x）
+
 ## 安装(install)
+请先安装mobx 4.x 或者 5.x（Please install mobx 4.x or 5.x first）
+```javascript 
 npm install mobx-extend
+```
 
 ## 使用(how to use)
 
@@ -16,6 +23,7 @@ npm install mobx-extend
 ```javascript
 // store.js
 import mobxExtend from 'mobx-extend'
+import {observable} from 'mobx'
 
 // no param
 @mobxExtend

@@ -1,7 +1,7 @@
 {
   "name": "mobx-extend",
-  "version": "1.0.5",
-  "description": "a simple mobx extend",
+  "version": "1.0.6",
+  "description": "A simple mobx extension package that provides initialization and reset functions for mobx data. And changed the way toJS is used",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,8 +14,11 @@
     "name": "yishuihe"
   },
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "mobx": "^4.15.5"
+  },
+  "peerDependencies": {
+    "mobx": "4.x||5.x"
   },
   "repository": {
     "type": "git",
